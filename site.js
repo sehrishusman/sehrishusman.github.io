@@ -1,5 +1,6 @@
 // Shared menu and footer for every page. Edit the menu here once and it changes everywhere.
-const CV_URL = "https://drive.google.com/file/d/1lTebVbSpuBHVzS6GRHEGPzC-RLV9UVMw/view?usp=sharing";
+// To update the CV, replace Sehrish_Resume.pdf with a new file of the same name.
+const CV_URL = "Sehrish_Resume.pdf";
 
 const MENU = [
   ["Home", "index.html"],
