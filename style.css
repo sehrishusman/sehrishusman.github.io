@@ -81,6 +81,12 @@ section.alt { background: var(--alt-bg); }
 .network-icon a:hover { color: var(--primary-dark); }
 .network-icon.small a { font-size: 1.3rem; }
 
+.video { margin: 1.6rem auto 0; max-width: 320px; }
+.video-frame { position: relative; aspect-ratio: 16 / 9; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 14px rgba(0,0,0,.12); background: #000; }
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video figcaption { font-size: .88rem; line-height: 1.4; margin-top: .6rem; color: var(--text); }
+.video figcaption span { color: var(--muted); font-size: .82rem; }
+
 .lead { font-size: 1.12rem; }
 .cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1.4rem; }
 .btn-solid, .btn-ghost {
