@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Sehrish Usman</title>
+<meta name="description" content="Dr. Sehrish Usman — Postdoctoral Researcher, Chair of Finance, University of Mannheim. Household finance, family economics, labour economics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --surface: #ffffff;
+    --text: #1f2328;
+    --muted: #5b6370;
+    --line: #e4e1da;
+    --accent: #1d4e89;
+    --accent-soft: #e8eef6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171c;
+      --surface: #1b1f26;
+      --text: #e6e8eb;
+      --muted: #9aa3ae;
+      --line: #2c323b;
+      --accent: #8db4e8;
+      --accent-soft: #1f2a3a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.65 "Inter", system-ui, sans-serif;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  h1, h2, h3 { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; line-height: 1.25; }
+
+  header.nav {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    max-width: 960px; margin: 0 auto; padding: 14px 16px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  }
+  .brand { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 1.15rem; color: var(--text); }
+  .nav-links { display: flex; gap: 18px; flex-wrap: wrap; font-size: .92rem; }
+  .nav-links a { color: var(--muted); }
+  .nav-links a:hover { color: var(--accent); text-decoration: none; }
+
+  main { max-width: 960px; margin: 0 auto; padding: 0 16px 64px; }
+  section { padding: 56px 0 8px; }
+  section > h2 { font-size: 1.7rem; margin: 0 0 24px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+
+  .hero { display: grid; grid-template-columns: 240px 1fr; gap: 40px; align-items: start; padding-top: 48px; }
+  .hero img { width: 100%; border-radius: 12px; display: block; }
+  .hero h1 { font-size: 2.4rem; margin: 0 0 4px; }
+  .role { color: var(--muted); margin: 0 0 20px; }
+  .social { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 14px; border: 1px solid var(--line); border-radius: 8px;
+    background: var(--surface); color: var(--text); font-size: .9rem; font-weight: 500;
+  }
+  .btn:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+  .btn svg { width: 16px; height: 16px; fill: currentColor; }
+  .interests { display: flex; gap: 8px; flex-wrap: wrap; margin: 16px 0 0; padding: 0; list-style: none; }
+  .interests li { background: var(--accent-soft); color: var(--accent); padding: 3px 10px; border-radius: 999px; font-size: .82rem; font-weight: 500; }
+
+  .paper { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px 24px; margin-bottom: 18px; }
+  .paper .tag { font-size: .75rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+  .paper h3 { font-size: 1.22rem; margin: 6px 0 4px; }
+  .paper .authors { color: var(--muted); font-size: .92rem; margin: 0 0 12px; }
+  .paper p { margin: 0 0 10px; }
+  details { margin-top: 8px; }
+  summary { cursor: pointer; color: var(--accent); font-size: .9rem; font-weight: 500; }
+  details p { margin-top: 10px; }
+  .meta { font-size: .88rem; color: var(--muted); }
+  .meta strong { color: var(--text); font-weight: 600; }
+
+  .list { list-style: none; padding: 0; margin: 0; }
+  .list li { display: grid; grid-template-columns: 1fr auto; gap: 4px 24px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .list li:last-child { border-bottom: 0; }
+  .list .title { font-weight: 600; }
+  .list .sub { color: var(--muted); font-size: .92rem; grid-column: 1; }
+  .list .date { color: var(--muted); font-size: .88rem; white-space: nowrap; grid-row: 1; grid-column: 2; }
+  h3.sub-h { font-size: 1.2rem; margin: 32px 0 6px; }
+
+  .media li { grid-template-columns: 1fr auto; }
+
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+  .contact-grid .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+  .card h3 { font-family: "Inter", sans-serif; font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 8px; }
+  .card p { margin: 0; }
+
+  footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 32px 16px; border-top: 1px solid var(--line); }
+
+  @media (max-width: 680px) {
+    .hero { grid-template-columns: 1fr; gap: 24px; }
+    .hero img { max-width: 200px; }
+    .hero h1 { font-size: 2rem; }
+    .list li { grid-template-columns: 1fr; }
+    .list .date { grid-row: auto; grid-column: 1; }
+    .paper { padding: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#home">Dr. Sehrish Usman</a>
+    <nav class="nav-links">
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#resume">Resume</a>
+      <a href="#media">Media</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HOME -->
+<section id="home" class="hero">
+  <img src="assets/profile.jpg" alt="Portrait of Dr. Sehrish Usman">
+  <div>
+    <h1>Dr. Sehrish Usman</h1>
+    <p class="role">Postdoctoral Researcher · <a href="https://www.bwl.uni-mannheim.de/en/about/areas-and-chairs/faculty-profile/usman/">Chair of Finance, University of Mannheim</a></p>
+    <p>I am an applied economist with research interests in household finance, family economics, and labour economics. Specifically, I study how large-scale economic, institutional, and technological changes shape household decisions and broader economic outcomes.</p>
+    <p>I did my PhD in economics from <a href="https://www.goethe-university-frankfurt.de/en">Goethe University Frankfurt</a> (<a href="https://www.gsefm.eu/about-us.html">GSEFM</a>) in 2025 and previously worked at the European Central Bank (ECB), Leibniz Institute for Financial Research (SAFE) and Deutsche Bundesbank.</p>
+    <ul class="interests">
+      <li>Household finance</li><li>Family economics</li><li>Labour economics</li><li>Climate economics</li>
+    </ul>
+    <div class="social">
+      <a class="btn" href="https://drive.google.com/file/d/1lTebVbSpuBHVzS6GRHEGPzC-RLV9UVMw/view?usp=sharing">
+        <svg viewBox="0 0 24 24"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/></svg>CV</a>
+      <a class="btn" href="mailto:sehrish.usman@uni-mannheim.de">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>Email</a>
+      <a class="btn" href="https://www.linkedin.com/in/sehrish-usman/">
+        <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.3 18.3V10H5.7v8.3h2.6zM7 8.9a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm11.3 9.4v-4.6c0-2.4-1.3-3.6-3.1-3.6-1.4 0-2 .8-2.4 1.3V10h-2.6v8.3h2.6v-4.4c0-1.2.2-2.3 1.7-2.3s1.5 1.4 1.5 2.4v4.3h2.3z"/></svg>LinkedIn</a>
+      <a class="btn" href="https://x.com/seharkhanus">
+        <svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+  <h2>Research</h2>
+
+  <article class="paper">
+    <span class="tag">Job Market Paper · Work in Progress</span>
+    <h3>Preparing for the worst: Labor Supply Adjustments within Marriage</h3>
+    <p class="authors">Available on request</p>
+    <p>I study how weakening outside option within marriage affects women's labor supply. Using household marital histories and exploiting the 2008 German alimony reform — which reduced post-divorce transfers — as a natural experiment, I find that employment among married women most affected by the reform rose by 8–10 percentage points. The response is concentrated among women facing higher risk of divorce and does not vary with household decision-making structures. These findings indicate that women adjust labor supply primarily through precautionary self-insurance rather than shifts in intra-household bargaining power when legal financial protection within marriage declines.</p>
+    <details><summary>Selected presentations</summary>
+      <p class="meta">Denver SOLE Conference (May 2026), Leeds University ILPC Conference (April 2026), German Sociological Association (DGS) (Feb 2026), European Economic Association Conference 2025 (Bordeaux), M-BEPS Conference 2025 (Maastricht University), RES PhD Conference 2024 (Southampton, UK), Social Policy Workshop BiB 2024 (Wiesbaden, Germany), RSEP Conference 2024 (Madrid, Spain), Goethe University Brownbag Seminar 2024 (Frankfurt, Germany), Deutsche Bundesbank Summer School 2024 (Eltville, Germany), 1st Bonn-Frankfurt-Mannheim PhD Conference 2023 (Bonn, Germany)</p>
+    </details>
+  </article>
+
+  <article class="paper">
+    <span class="tag">Publication · European Economic Review, 2025</span>
+    <h3><a href="https://ideas.repec.org/a/eee/eecrev/v178y2025ics001429212500131x.html">Going NUTS: The regional impact of extreme climate events over medium term</a></h3>
+    <p class="authors">with <a href="https://www.ecb.europa.eu/pub/research/authors/profiles/miles-parker.en.html">Miles Parker</a> (ECB) and <a href="https://www.ecb.europa.eu/pub/research/authors/profiles/guzman-gonzalez-torres-fernandez.de.html">Guzmán González-Torres</a> (Bank of Italy)</p>
+    <p>The projected increase in extreme climate events in the coming decades is likely to exacerbate the existing productivity and demographic challenges facing Europe. We study the dynamic, medium-run macroeconomic effects of heatwaves, droughts and floods in 1160 EU regions through the lens of a local projections, difference in difference framework. These events reduce output not only on impact but also into the medium term. Output is 1.5 percentage points lower two years after a summer heatwave, 3 percentage points lower four years after a drought and 2.8 percentage points lower four years after a flood. Both lower regional population and lower labour productivity per hour worked contribute to the medium-term decline.</p>
+    <details><summary>Selected presentations</summary>
+      <p class="meta">2nd International Conference on Climate-Macro-Finance Interface 2025 (Bayes Business School, London), ESCB Research Cluster Climate Change 2024 (Frankfurt, Germany), SEED at Uniurb 2024 (Urbino, Italy), European Central Bank Internal Seminar (Frankfurt, Germany), 2nd Bonn-Frankfurt-Mannheim PhD Conference 2024 (Bonn, Germany)</p>
+    </details>
+  </article>
+
+  <article class="paper">
+    <span class="tag">Working Paper</span>
+    <h3><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5484206">Dry-roasted NUTS: early estimates of the regional impact of 2025 extreme weather</a></h3>
+    <p class="authors">with Miles Parker (ECB) and Mathilde Vallat (ECB)</p>
+    <p>We estimate the economic impact of three types of extreme weather events — floods, droughts and heatwaves — that occurred in Europe during the summer of 2025. Using weather data and estimates of average historical impact from Usman et al. (2025), we conservatively calculate that these events will lower gross value added (GVA) in the affected NUTS3 regions by a combined €43 billion in 2025, equivalent to 0.26 percent of total European Union output. Beyond these short-term losses, the regional impact of extreme events historically increases over time, with substantial impact in the following years. Based on the average historical experience, we estimate that the annual GVA in the affected regions will be €126 billion lower by 2029 than had these events not occurred.</p>
+    <p class="meta"><strong>Media coverage:</strong> The Guardian, Euronews, CNN, Politico, New York Times, Forbes, and many other international and local newspapers — see <a href="#media">Media</a>.</p>
+    <details><summary>Selected presentations</summary>
+      <p class="meta">Town Hall Brussels (European Parliament, Brussels), European Commission Internal Workshop, IKT Institute Germany (Guest Speaker)</p>
+    </details>
+  </article>
+
+  <article class="paper">
+    <span class="tag">Working Paper</span>
+    <h3><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4560666">Dynamics of life course family transitions in Germany: Exploring patterns, process and relationships</a></h3>
+    <p class="authors">with <a href="https://www.old.wiwi.uni-frankfurt.de/abteilungen/finance/lehrstuhl/prof-dr-raimond-maurer/team/prof-dr-raimond-maurer.html">Prof. Raimond Maurer</a> (Goethe University Frankfurt)</p>
+    <details><summary>Abstract</summary>
+      <p>This paper explores the dynamics of family transitions using discrete-time event history analysis based on German Socioeconomic Panel data. We aim to predict the likelihood of key life events among diverse individuals based on their observed characteristics. We find that higher educational attainment, better income level, and marriage emerge as salient protective factors mitigating the risk of mortality; better education delays early marriage, whereas lower educational attainment, protracted relationships, and the presence of children act as protective factors against divorce. Our key finding shows that the disparity in mean life expectancy between individuals from low-income and high-income brackets is 9 years among males and 6 years among females, thereby illustrating the mortality inequality attributed to income disparities. Our estimates show that compared to East Germans, the West Germans have a lower risk of mortality, lesser likelihood of early first marriage, higher risk of divorce and higher probability of remarriage.</p>
+    </details>
+  </article>
+</section>
+
+<!-- TEACHING -->
+<section id="teaching">
+  <h2>Teaching</h2>
+  <ul class="list">
+    <li><span class="title">Women in Leadership</span><span class="date">Winter 2025 – present</span><span class="sub">University of Mannheim · PhD course</span></li>
+    <li><span class="title">Economics of Gender in Households and Organizations</span><span class="date">Summer 2026</span><span class="sub">University of Mannheim · Bachelor course</span></li>
+    <li><span class="title">Supervision of Research Seminar in Corporate Governance</span><span class="date">Winter 2025 – present</span><span class="sub">University of Mannheim · Master students</span></li>
+    <li><span class="title">Supervision of Bachelor/Master Theses</span><span class="date">Winter 2025 – present</span><span class="sub">University of Mannheim</span></li>
+  </ul>
+</section>
+
+<!-- RESUME -->
+<section id="resume">
+  <h2>Resume</h2>
+  <p><a class="btn" href="https://drive.google.com/file/d/1lTebVbSpuBHVzS6GRHEGPzC-RLV9UVMw/view?usp=sharing">
+    <svg viewBox="0 0 24 24"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/></svg>Download full CV (PDF)</a></p>
+
+  <h3 class="sub-h">Education</h3>
+  <ul class="list">
+    <li><span class="title"><a href="https://www.gsefm.eu/degree-programs/economics.html">PhD Economics</a></span><span class="date">2025</span><span class="sub">Goethe University Frankfurt (GSEFM)</span></li>
+    <li><span class="title">M.Sc. Quantitative Economics</span><span class="date">2022</span><span class="sub">Goethe University Frankfurt (GSEFM)</span></li>
+    <li><span class="title"><a href="https://www.master.economics.uni-mainz.de/">M.Sc. International Economics and Public Policy</a></span><span class="date">2015</span><span class="sub">Johannes Gutenberg University Mainz</span></li>
+    <li><span class="title">Bachelor of Business Administration</span><span class="date">2009</span><span class="sub"><a href="https://nust.edu.pk/">National University of Science and Technology (NUST)</a>, Islamabad</span></li>
+  </ul>
+
+  <h3 class="sub-h">Professional Experience</h3>
+  <ul class="list">
+    <li><span class="title"><a href="https://www.bwl.uni-mannheim.de/en/about/areas-and-chairs/faculty-profile/usman/">University of Mannheim</a> (Chair of Finance)</span><span class="date">May 2025 – present</span><span class="sub">Postdoctoral Researcher</span></li>
+    <li><span class="title"><a href="https://www.bundesbank.de/de/publikationen/forschung">Deutsche Bundesbank</a> (Research Centre Frankfurt)</span><span class="date">Oct 2024 – Mar 2025</span><span class="sub">PhD Internship (Expectations and behaviour of households and companies based on microdata)</span></li>
+    <li><span class="title">Goethe University Frankfurt (Chair of Finance)</span><span class="date">Jun 2023 – Mar 2025</span><span class="sub">Research Assistant</span></li>
+    <li><span class="title">European Central Bank (Directorate General Economics)</span><span class="date">Sep 2023 – May 2024</span><span class="sub">PhD Trainee (Supply side, labour and surveillance division)</span></li>
+    <li><span class="title"><a href="https://safe-frankfurt.de/">Leibniz Institute for Financial Research SAFE</a></span><span class="date">Sep 2018 – Jun 2023</span><span class="sub">Junior Researcher (Household Finance)</span></li>
+    <li><span class="title"><a href="https://www.frankfurt-school.de/home">Frankfurt School of Finance and Management</a></span><span class="date">Jan 2020 – May 2020</span><span class="sub">Research Assistant / Teaching Assistant</span></li>
+  </ul>
+</section>
+
+<!-- MEDIA -->
+<section id="media">
+  <h2>Media</h2>
+  <ul class="list media">
+    <li><a class="title" href="https://www.daswetter.com/nachrichten/wissenschaft/extreme-wetterereignisse-europa-drohen-langerfristig-126-milliarden-euro-verlust.html">Extreme Wetterereignisse: Europa drohen längerfristig 126 Milliarden Euro Verlust</a><span class="date">10.01.2026</span><span class="sub">daswetter.com</span></li>
+    <li><a class="title" href="https://de.euronews.com/green/2025/12/27/todliche-hitzewellen-europas-extremwetter-2025">Tödliche Hitzewellen und Sturzfluten</a><span class="date">27.12.2025</span><span class="sub">Euronews</span></li>
+    <li><a class="title" href="https://www.focus.de/earth/1-euro-fuer-die-zukunft-was-hinter-klimaanpassung-steckt-und-wie-sie-milliardenschaeden-verhindert_0f7c1a25-48d4-4d57-a3aa-54b32496f095.html">Was hinter Klimaanpassung steckt und wie sie Milliardenschäden verhindert</a><span class="date">26.11.2025</span><span class="sub">Focus Online</span></li>
+    <li><a class="title" href="https://www.euronews.com/green/2025/10/09/cost-of-europes-extreme-weather-doubled-this-decade-and-could-hit-126-billion-by-2029">Cost of Europe's extreme weather doubled this decade — and could hit €126 billion by 2029</a><span class="date">09.10.2025</span><span class="sub">Euronews</span></li>
+    <li><a class="title" href="https://www.wiwo.de/politik/europa/eu-klimapolitik-politik-und-industrie-machen-druck-auf-den-emissionshandel-mit-erfolg/100157343.html">Politik und Industrie machen Druck auf den Emissionshandel – mit Erfolg?</a><span class="date">25.09.2025</span><span class="sub">WirtschaftsWoche</span></li>
+    <li><a class="title" href="https://www.nytimes.com/2025/09/16/world/europe/europes-extreme-summer-weather-could-cost-it-billions.html">Europe's Extreme Summer Weather Could Cost It Billions</a><span class="date">16.09.2025</span><span class="sub">The New York Times</span></li>
+    <li><a class="title" href="https://wissenschaftaktuell.de/2025/09/16/extreme-wetterereignisse-im-sommer-2025-europa-drohen-laengerfristig-126-milliarden-euro-verlust/">Europa drohen längerfristig 126 Milliarden Euro Verlust</a><span class="date">16.09.2025</span><span class="sub">wissenschaftaktuell</span></li>
+    <li><a class="title" href="https://www.theguardian.com/world/2025/sep/15/europes-summer-of-extreme-weather-caused-43bn-of-short-term-losses-analysis-finds">Europe's summer of extreme weather caused €43bn of short-term losses, analysis finds</a><span class="date">15.09.2025</span><span class="sub">The Guardian</span></li>
+    <li><a class="title" href="https://de.euronews.com/green/2025/09/15/studie-europa-drohen-milliardenverluste-durch-extremwetter">Studie: Europa drohen Milliardenverluste durch Extremwetter</a><span class="date">15.09.2025</span><span class="sub">Euronews</span></li>
+    <li><a class="title" href="https://www.euronews.com/green/2025/09/15/europe-faces-billions-in-losses-from-summer-heatwaves-droughts-and-floods-study-warns">Europe faces billions in economic losses from summer heatwaves, droughts and floods</a><span class="date">15.09.2025</span><span class="sub">Euronews</span></li>
+    <li><a class="title" href="https://www.forbes.ro/economia-europeana-a-inregistrat-pierderi-de-43-de-miliarde-de-euro-din-cauza-vremii-extreme-465136">Economia europeană a înregistrat pierderi de 43 de miliarde de euro…</a><span class="date">15.09.2025</span><span class="sub">Forbes Romania</span></li>
+    <li><a class="title" href="https://www.spiegel.de/wirtschaft/klimakrise-extremwetter-im-sommer-2025-kostet-eu-rund-126-milliarden-euro-a-6d7dfaae-cfd8-4b97-84ed-0c780f1d886f">Extremwetter im Sommer 2025 kostet die EU rund 126 Milliarden Euro</a><span class="date">15.09.2025</span><span class="sub">DER SPIEGEL – Wirtschaft</span></li>
+    <li><a class="title" href="https://www.tagesspiegel.de/wissen/125-milliarden-euro-klimaschaden-der-sommer-2025-trifft-europa-hart-14314631.html">125 Milliarden Euro Klimaschäden: Der Sommer 2025 trifft Europa hart</a><span class="date">15.09.2025</span><span class="sub">Tagesspiegel</span></li>
+    <li><a class="title" href="https://www.swr.de/swraktuell/baden-wuerttemberg/mannheim/extrem-wetter-wirtschaft-100.html">Studie der Uni Mannheim: Milliardenschäden in Europa durch extreme Wetterereignisse</a><span class="date">15.09.2025</span><span class="sub">SWR</span></li>
+    <li><a class="title" href="https://www.stuttgarter-zeitung.de/inhalt.extreme-wetterereignisse-klima-anpassung-kostet-nichtstun-kostet-noch-viel-mehr.45126144-c316-49c3-a1e8-ff281bb78321.html">Klima-Anpassung kostet – Nichtstun kostet noch viel mehr</a><span class="date">15.09.2025</span><span class="sub">Stuttgarter Zeitung</span></li>
+    <li><a class="title" href="https://www.stern.de/news/studie--verluste-durch-extremwetter-in-europa-diesen-sommer-bei-43-milliarden-euro-36055790.html">Studie: Verluste durch Extremwetter in Europa diesen Sommer bei 43 Milliarden Euro</a><span class="date">15.09.2025</span><span class="sub">Stern</span></li>
+    <li><a class="title" href="https://www.lemonde.fr/en/environment/article/2025/09/15/summer-2025-heat-waves-cost-france-over-10-billion_6745420_114.html">Summer 2025 heat waves cost France over €10 billion</a><span class="date">15.09.2025</span><span class="sub">Le Monde</span></li>
+    <li><a class="title" href="https://www.br.de/nachrichten/wissen/kontinente-verlieren-alarmierende-mengen-suesswasser,UubObGf">Dürren senken BIP um 3 Prozentpunkte</a><span class="date">22.08.2025</span><span class="sub">Bayerischer Rundfunk</span></li>
+    <li><a class="title" href="https://www.faz.net/aktuell/gesellschaft/duerre-in-europa-warum-giessverbote-meist-ungerecht-sind-110637606.html">Trockenheit in Europa: „Dürre ist kein Hitzethema"</a><span class="date">15.08.2025</span><span class="sub">Frankfurter Allgemeine Zeitung</span></li>
+  </ul>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact-grid">
+    <div class="card"><h3>Email</h3><p><a href="mailto:sehrish.usman@uni-mannheim.de">sehrish.usman@uni-mannheim.de</a></p></div>
+    <div class="card"><h3>Address</h3><p>University of Mannheim<br>Faculty of Finance and Corporate Governance<br>L9 1-2<br>68161 Mannheim, Germany</p></div>
+    <div class="card"><h3>Office hours</h3><p>Upon request</p></div>
+  </div>
+</section>
+
+</main>
+
+<footer>© <span id="y">2026</span> Sehrish Usman</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
