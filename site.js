@@ -33,6 +33,7 @@ const MENU = [
         <li><a href="mailto:sehrish.usman@uni-mannheim.de" title="Email"><i class="fas fa-envelope"></i></a></li>
         <li><a href="https://www.linkedin.com/in/sehrish-usman/" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
         <li><a href="https://x.com/seharkhanus" target="_blank" rel="noopener" title="X"><i class="fab fa-x-twitter"></i></a></li>
+        <li><a href="https://orcid.org/0009-0004-9026-4364" target="_blank" rel="noopener" title="ORCID"><i class="fab fa-orcid"></i></a></li>
       </ul>
       <p>© ${new Date().getFullYear()} Sehrish Usman · University of Mannheim</p>
     </footer>`);
