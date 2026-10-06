@@ -1,8 +1,15 @@
 # sehrishusman.github.io
 
-Personal academic website of Dr. Sehrish Usman, a plain static site (no build step).
+Personal academic website of Sehrish Usman. Plain HTML/CSS, no build step, no software to install.
 
-- `index.html`: the whole site (Home, Research, Teaching, Resume, Media, Contact)
+- `index.html`: all content (About, Research, Teaching, Experience, Media, Contact)
+- `style.css`: the design (change `--primary` at the top to recolour the site)
 - `assets/profile.jpg`: profile photo
 
-To update, edit `index.html` and push. GitHub Pages republishes automatically.
+## Updating
+
+- **New paper:** in `index.html`, copy one `<div class="pub"> ... </div>` block in the Research section and edit it.
+- **New job:** copy one `<div class="exp"> ... </div>` block in the Experience section (newest first).
+- **New press article:** copy one `<li>` line in the Media section.
+
+Edit the file on github.com directly (pencil icon) and click "Commit changes". The site updates in about a minute.
