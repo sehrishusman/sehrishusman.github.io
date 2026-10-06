@@ -107,6 +107,7 @@ section.alt { background: var(--alt-bg); }
 .interest p { margin: 0; color: var(--muted); font-size: .95rem; line-height: 1.55; }
 
 /* News */
+.news-heading { font-size: 1.5rem; margin: 2.2rem 0 .4rem; padding-bottom: .4rem; border-bottom: 1px solid #e5e5e5; }
 .news { list-style: none; padding: 0; margin: 0; }
 .news li { display: grid; grid-template-columns: 110px 1fr; gap: 18px; padding: 14px 0; border-bottom: 1px solid #eee; }
 .news li:last-child { border-bottom: 0; }
