@@ -181,9 +181,9 @@ section.alt { background: var(--alt-bg); }
 .outlets li { display: flex; align-items: center; }
 .outlets img {
   height: 26px; width: auto; max-width: 150px; display: block;
-  filter: grayscale(1); opacity: .6; transition: filter .2s, opacity .2s;
+  transition: transform .2s;
 }
-.outlets a:hover img { filter: none; opacity: 1; }
+.outlets a:hover img { transform: scale(1.08); }
 @media (max-width: 860px) { .outlets { gap: 16px 24px; } .outlets img { height: 20px; max-width: 120px; } }
 .media-list { list-style: none; padding: 0; margin: 0; }
 .media-list li { padding: 12px 0; border-bottom: 1px solid #eee; }
