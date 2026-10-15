@@ -1,6 +1,6 @@
 // Shared menu and footer for every page. Edit the menu here once and it changes everywhere.
 // To update the CV, replace Sehrish_Resume.pdf with a new file of the same name.
-const CV_URL = "Sehrish_Resume.pdf";
+const CV_URL = "cv.html"; // TEMP: CV PDF removed; set back to "Sehrish_Resume.pdf" when a new one is added
 
 const MENU = [
   ["Home", "index.html"],
